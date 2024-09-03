@@ -50,9 +50,6 @@ jobs:
           key: playwright
           restore-keys: playwright
 
-      - name: Print Cache Key
-        run: echo "Cache Key → playwright"
-
       - name: Install Playwright with dependencies
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps
