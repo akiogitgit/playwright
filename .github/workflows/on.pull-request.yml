@@ -42,8 +42,6 @@ jobs:
 
       - name: Print Cache Key
         run: echo "Cache Key → playwright"
-      - name: List Cache Directory
-        run: ls -alh ~/.cache/ms-playwright
 
       - name: Install Playwright with dependencies
         if: steps.playwright-cache.outputs.cache-hit != 'true'
